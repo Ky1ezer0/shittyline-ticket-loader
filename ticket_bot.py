@@ -128,7 +128,7 @@ def main():
                 break
             log.info("Buy button not found in 2 attempts, refreshing page (debug mode)...")
             driver.refresh()
-            time.sleep(1)
+            time.sleep()
     # Notify user
     log.info("Buy button pressed! Notifying user with sound...")
     try:

@@ -1,3 +1,7 @@
 # Ignore sensitive and log files
 config.ini
-ticket_bot.log
+*.log
+*.spec
+dist/
+build/
+*.ico
