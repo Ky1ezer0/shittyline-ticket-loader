@@ -10,7 +10,17 @@ A Python bot to help you automatically buy tickets for your favorite concerts on
 - Auto-exits if you close the browser window
 - All actions are logged to `ticket_bot.log`
 
-## Setup
+### How to Use the .exe
+1. **Download `ticket_bot.exe`** from the Releases page and place it in a folder of your choice.
+2. **Copy `config.example.ini` to `config.ini`** in the same folder, and edit your settings (URL, time, etc.).
+3. **Make sure your `sound.mp3` file** (or whatever you set as `NOTIFY_SOUND`) is in the same folder as the `.exe`.
+4. **Double-click `ticket_bot.exe`** to run. A command window will appear showing live logs. The icon is embedded in the `.exe`.
+
+> **Note:** No Python or pipenv is required for the `.exe`. If you want to run from source or on other platforms, see below.
+
+---
+
+## Setup (For Developers & Advanced Users)
 
 ### 1. Clone or Download
 Place all files in a folder on your computer.
@@ -40,16 +50,6 @@ A template config file is provided as `config.example.ini`. For your own setup:
    - `NOTIFY_SOUND`: Path to a sound file (e.g., `sound.wav` or `sound.mp3`)
    - `DEBUG`: `1` or `true` to skip waiting for start time (for testing), `0` or `false` for normal
    - `BROWSER`: `chrome` (default) or `edge`
-
-Example `config.example.ini`:
-```
-[ticket]
-TICKET_URL=https://your-ticket-url.com
-START_TIME=2025-05-08 06:53:00
-NOTIFY_SOUND=sound.mp3
-DEBUG=0
-BROWSER=chrome
-```
 
 > **Note:**
 > - `config.ini` is in `.gitignore` and should NOT be committed to git. Use `config.example.ini` as the public template for sharing or pushing to repositories.
